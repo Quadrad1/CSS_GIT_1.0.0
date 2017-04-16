@@ -1,0 +1,125 @@
+@mixin row-flex() {
+    // margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+@mixin col-xs($w) {
+  @media only screen and (max-width: 768px){
+    width: calc(4.166666% * #{$w});
+    // margin: 0 15px;
+  }
+}
+@mixin col-sm($w) {
+  @media only screen and (max-width: 992px){
+    width: calc(4.166666% * #{$w});
+    // margin: 0 15px;
+  }
+}
+@mixin col-md($w) {
+  @media only screen and (max-width: 1200px){
+    width: calc(4.166666% * #{$w});
+    // margin: 0 15px;
+  }
+}
+@mixin col-lg($w) {
+  @media only screen and (max-width: 1800px){
+    width: calc(4.166666% * #{$w});
+    // margin: 0 15px;
+  }
+}
+
+
+
+@mixin col($w) {
+  @media only screen and (min-width: 100px){
+    width: calc(4.166666% * #{$w});
+    // margin: 0 15px;
+  }
+}
+
+
+
+
+@mixin justify($w) {
+    justify-content: #{$w};
+}
+
+@mixin justify-xs($w) {
+  @media only screen and (max-width: 768px){
+    justify-content: #{$w};
+  }
+}
+@mixin justify-sm($w) {
+  @media only screen and (min-width: 768px){
+    justify-content: #{$w};
+  }
+}
+@mixin justify-md($w) {
+  @media only screen and (min-width: 992px){
+    justify-content: #{$w};
+  }
+}
+@mixin justify-lg($w) {
+  @media only screen and (min-width: 1200px){
+    justify-content: #{$w};
+  }
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+.wrap{
+  background: #333333;
+  @include row-flex;
+  min-height: 500px;
+}
+header{
+  @include col(24);
+  border-bottom: 1px solid #dadada;
+
+  @include row-flex;
+  @include justify(space-between);
+  @include justify-xs(center);
+  align-self: flex-start;
+  align-items: flex-start;
+    .logo{
+      @include col(5);
+      @include col-xs(10);
+      height: 80px;
+      background: #dcdcdc;
+      font-size: 20px;
+      color: green;
+      display: flex;
+      font-family: arial;
+    }
+    .header_menu{
+      @include col(10);
+      @include col-xs(20);
+      @include row-flex;
+      @include justify-xs(center);
+      background: #dcdcdc;
+      display: flex;
+      justify-content: space-around;
+      align-self: center;
+      .h_item{
+        @include col(5);
+        @include col-xs(20);
+        list-style-type: none;
+        border: 1px solid black;
+        text-align: center;
+        color: red;
+        align-self: center;
+      }
+    }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    background: red;
+  }
+}

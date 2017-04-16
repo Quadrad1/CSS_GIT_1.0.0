@@ -1,0 +1,58 @@
+.box {
+  background: red;
+  height: 40px;
+}
+
+.box2 {
+  background: green;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.box3 {
+  background: green;
+  height: 40px;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .box {
+    width: calc(100%/3);
+  }
+
+  .box2 {
+    width: calc(100%/10);
+  }
+
+  .box3 {
+    width: calc(100%/5);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .box {
+    width: calc(100%/8);
+  }
+
+  .box2 {
+    width: calc(100%/8);
+  }
+
+  .box3 {
+    width: calc(100%/6);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: calc(100%/10);
+  }
+
+  .box2 {
+    width: calc(100%/3);
+  }
+
+  .box3 {
+    width: calc(100%/1);
+  }
+}
