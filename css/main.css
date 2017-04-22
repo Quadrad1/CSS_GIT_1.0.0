@@ -12,82 +12,65 @@
 }
 
 header {
-  border-bottom: 1px solid #dadada;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-  align-self: flex-start;
   align-items: flex-start;
+  align-self: flex-start;
 }
 
-header .logo {
-  height: 80px;
-  background: #dcdcdc;
-  font-size: 20px;
-  color: green;
-  display: flex;
-  font-family: arial;
+.menu1 {
+  display: block;
 }
 
-header .header_menu {
-  display: flex;
+.list {
+  display: inline-block;
   flex-wrap: wrap;
-  width: 100%;
-  background: #dcdcdc;
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
+  margin: 5px 20px;
 }
 
-header .header_menu .h_item {
-  list-style-type: none;
-  border: 1px solid black;
+.item {
+  font-size: 15px;
+  box-sizing: border-box;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   text-align: center;
-  color: red;
-  align-self: center;
+  list-style-type: none;
 }
 
 @media only screen and (min-width: 100px) {
   header {
+    width: calc(4.166666% * 21);
+  }
+
+  .menu1 {
     width: calc(4.166666% * 24);
   }
 
-  header .logo {
-    width: calc(4.166666% * 5);
+  .list {
+    width: calc(4.166666% * 11);
   }
 
-  header .header_menu {
-    width: calc(4.166666% * 10);
+  .item {
+    width: calc(4.166666% * 6);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .item {
+    width: calc(4.166666% * 24);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .item {
+    width: calc(4.166666% * 12);
   }
 
-  header .header_menu .h_item {
-    width: calc(4.166666% * 5);
+  .item {
+    font-size: 40px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  header {
-    justify-content: center;
-  }
-
-  header .logo {
-    width: calc(4.166666% * 10);
-  }
-
-  header .header_menu {
-    width: calc(4.166666% * 20);
-  }
-
-  header .header_menu {
-    justify-content: center;
-  }
-
-  header .header_menu .h_item {
-    width: calc(4.166666% * 20);
-  }
-
-  header {
-    background: red;
+  .item {
+    width: calc(4.166666% * 24);
   }
 }
